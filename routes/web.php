@@ -14,5 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index', [
+        "name" => "triadmoko",
+        "age" => "23",
+        "image" => "6.jpeg"
+    ]);
+});
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "triadmoko",
+        "age" => "23",
+        "image" => "6.jpeg"
+    ]);
+});
+Route::get('/blog', function () {
+    return view('blog');
+});
+Route::get('/contact', function () {
+    return view('contact');
 });
