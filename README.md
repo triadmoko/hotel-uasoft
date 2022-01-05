@@ -69,7 +69,10 @@ Open URL http://127.0.0.1:8000 to browser
 You can read documentation in the link
 [Structure Folder]([https://link](https://laravel.com/docs/8.x/structure))
 
-
+## Button Active
+```php
+{{ ($title == 'name-title' ) ? 'active' : '' }}
+```
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
