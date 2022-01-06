@@ -73,6 +73,12 @@ You can read documentation in the link
 ```php
 {{ ($title == 'name-title' ) ? 'active' : '' }}
 ```
+
+## Create Model & Controller PHP Artisan plugin VSC
+- Install plugin `laravel artisan`
+- `ctrl` + `shift` + `P`
+- Search Artisan:Make Controller `or` Model 
+- Fill name Controller `or` Model 
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
