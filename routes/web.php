@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HotelDetailController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\UserController;
+use App\Models\Hotel;
+use App\Models\Room;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +20,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/user/index', [
-        "title" => 'Home',
-        "name" => "triadmoko",
-        "age" => "23",
-        "image" => "6.jpeg"
-    ]);
+    return view('user.index');
 });
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
+
+Route::get('/hotel-grid', [HotelController::class, 'index']);
+
+// Route::get('/hotel-detail/{hotel}', [HotelController::class, 'show']);
+
+Route::get('/hotel-rooms/{hotel}', [RoomController::class, 'viewRoom']);

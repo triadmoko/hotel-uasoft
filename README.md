@@ -74,6 +74,19 @@ You can read documentation in the link
 {{ ($title == 'name-title' ) ? 'active' : '' }}
 ```
 
+## Laravel Database Migration
+- create table database use migration
+```
+php artisan migrate
+```
+- delete table database use migrasion rollback
+```
+php artisan migrate:rollback
+```
+- rollback and migrate table database
+```
+php artisan migrate:fresh
+```
 ## Create Model & Controller PHP Artisan plugin VSC
 - Install plugin `laravel artisan`
 - `ctrl` + `shift` + `P`

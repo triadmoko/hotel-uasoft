@@ -86,29 +86,20 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="menu-wrapper">
+                    <div class="menu-wrapper justify-content-between">
                         <a href="#" class="down-button"><i class="la la-angle-down"></i></a>
                         <div class="logo">
-                            <a href="index-2.html"><img src="/user-asset/images/logo.png" alt="logo"></a>
+                            <a href="/"><img src="/user-asset/images/logo.png" alt="logo"></a>
                             <div class="menu-toggler">
                                 <i class="la la-bars"></i>
                                 <i class="la la-times"></i>
                             </div><!-- end menu-toggler -->
                         </div><!-- end logo -->
-                        <div class="main-menu-content">
+                        <div class="main-menu-content pr-0 ml-0">
                             <nav>
                                 <ul>
                                     <li>
-                                        <a href="#">Home <i class="la la-angle-down"></i></a>
-                                        <ul class="dropdown-menu-item">
-                                            <li><a href="index-2.html">Home - main</a></li>
-                                            <li><a href="index2.html">Home - Hotel</a></li>
-                                            <li><a href="index3.html">Home - Activity</a></li>
-                                            <li><a href="index4.html">Home - Car</a></li>
-                                            <li><a href="index5.html">Home - Cruise</a></li>
-                                            <li><a href="index6.html">Home - Flight</a></li>
-                                            <li><a href="index7.html">Home - City Tour <span class="badge bg-2 text-white">New</span></a></li>
-                                        </ul>
+                                        <a href="/">Home</i></a>
                                     </li>
                                     <li>
                                         <a href="#">Tour <i class="la la-angle-down"></i></a>

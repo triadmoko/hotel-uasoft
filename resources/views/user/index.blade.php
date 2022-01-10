@@ -2992,7 +2992,7 @@
                 <div class="section-heading">
                     <h2 class="sec__title text-white line-height-55">Let us show you the world <br> Discover our most popular destinations</h2>
                 </div><!-- end section-heading -->
-                <div class="btn-box padding-top-35px">
+                <div class="btn-box padding-top-30px">
                     <a href="become-local-expert.html" class="theme-btn border-0">Join with us</a>
                 </div>
             </div><!-- end col-lg-12 -->
