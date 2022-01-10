@@ -12,6 +12,10 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function hotels()
+    {
+        return $this->hasMany(Hotel::class);
+    }
     /**
      * The attributes that are mass assignable.
      *

@@ -57,6 +57,7 @@ class RoomController extends Controller
         return view(
             'user.room-grid',
             [
+                'title' => $hotel->title,
                 'rooms' => $hotel->rooms
             ]
         );

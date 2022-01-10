@@ -233,7 +233,8 @@
                 <div class="card-item">
                     <div class="card-img">
                         <a href="/hotel-rooms/{{ $hotel->id }}" class="d-block">
-                            <img src="/user-asset/images/{{ $hotel->image }}" alt="hotel-img">
+                            {{--url image /user-asset/images/ --}}
+                            <img src="{{ $hotel->image }}" alt="hotel-img">
                         </a>
                         <span class="badge">Bestseller</span>
                         <div class="add-to-wishlist icon-element" data-toggle="tooltip" data-placement="top"
@@ -244,6 +245,7 @@
                     <div class="card-body">
                         <h3 class="card-title"><a href="/hotel-rooms/{{ $hotel->id }}">{{ $hotel->title }}</a></h3>
                         <p class="card-meta">{{ $hotel->address }}</p>
+                        <p class="card-meta">Post By : {{ $hotel->user->name }}</p>
                         <div class="card-rating">
                             <span class="badge text-white">4.4/5</span>
                             <span class="review__text">Average</span>

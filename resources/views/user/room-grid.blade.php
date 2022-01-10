@@ -11,7 +11,7 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb-content text-center">
                         <div class="section-heading">
-                            <h2 class="sec__title text-white">Room Grid</h2>
+                            <h2 class="sec__title text-white">{{ $title }}</h2>
                         </div>
                         <span class="arrow-blink">
                             <i class="la la-arrow-down"></i>
@@ -88,7 +88,8 @@
                             <div class="card-img-carousel carousel-action carousel--action">
                                 <div class="card-img">
                                     <a href="room-details.html" class="d-block">
-                                        <img src="/user-asset/images/{{ $room->image }}" alt="{{ $room->title }}">
+                                        {{-- url image /user-asset/images/ --}}
+                                        <img src="{{ $room->image }}" alt="{{ $room->title }}">
                                     </a>
                                 </div>
                             </div>
