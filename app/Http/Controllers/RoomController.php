@@ -58,7 +58,7 @@ class RoomController extends Controller
             'user.room-grid',
             [
                 'title' => $hotel->title,
-                'rooms' => $hotel->rooms
+                'rooms' => $hotel->rooms->load('hotel')
             ]
         );
     }

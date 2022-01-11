@@ -190,25 +190,8 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">Hotel <i class="la la-angle-down"></i></a>
-                                        <ul class="dropdown-menu-item">
-                                            <li><a href="hotel-grid.html">Hotel grid</a></li>
-                                            <li><a href="hotel-list.html">Hotel list</a></li>
-                                            <li><a href="hotel-sidebar.html">Hotel sidebar </a></li>
-                                            <li><a href="hotel-single.html">Hotel details</a></li>
-                                            <li><a href="hotel-booking.html">Hotel Booking</a></li>
-                                            <li><a href="hotel-search-result.html">Hotel Search Result</a></li>
-                                            <li>
-                                                <a href="#">Rooms <i class="la la-plus"></i></a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="room-list.html">Room List</a></li>
-                                                    <li><a href="room-grid.html">Room Grid</a></li>
-                                                    <li><a href="room-search-result.html">Search Result</a></li>
-                                                    <li><a href="room-search-result-list.html">Search Result list</a></li>
-                                                    <li><a href="room-details.html">Room Details</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="/hotel-grid">Hotel</a>
+                                       
                                     </li>
                                     <li>
                                         <a href="#">car <i class="la la-angle-down"></i></a>

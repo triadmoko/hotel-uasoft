@@ -5,26 +5,46 @@
 <!-- ================================
     START BREADCRUMB AREA
 ================================= -->
+
 <section class="breadcrumb-area bread-bg-7">
     <div class="breadcrumb-wrap">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="breadcrumb-content">
+                <div class="col-lg-12">
+                    <div class="search-result-content">
                         <div class="section-heading">
-                            <h2 class="sec__title text-white">Hotel Grid</h2>
+                            <h2 class="sec__title text-white">Hotel Search Result</h2>
                         </div>
-                    </div><!-- end breadcrumb-content -->
-                </div><!-- end col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="breadcrumb-list text-right">
-                        <ul class="list-items">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li>Hotel</li>
-                            <li>Hotel Grid</li>
-                        </ul>
-                    </div><!-- end breadcrumb-list -->
-                </div><!-- end col-lg-6 -->
+                        <div class="search-fields-container margin-top-30px">
+                            <div class="contact-form-action">
+                                <form action="/hotel-grid" class="row">
+                                    <div class="col-lg-10 col-sm-4 pr-0">
+                                        <div class="input-box">
+                                            <label class="label-text">Search Hotel or Name Hotel</label>
+                                            <div class="form-group">
+                                                <span class="la la-map-marker form-icon"></span>
+                                                <input class="form-control" name="search" type="text"
+                                                    placeholder="Destination" value="{{ request('search') }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6 pr-0">
+                                        <center>
+                                            <div class="input-box">
+                                                <label class="label-text">.</label>
+                                                <div class="form-group">
+                                                    <button class="theme-btn" type="submit">Search</button>
+                                                </div>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </form>
+                            </div><!-- end contact-form-action -->
+
+
+                        </div><!-- end search-fields-container -->
+                    </div><!-- end search-result-content -->
+                </div><!-- end col-lg-12 -->
             </div><!-- end row -->
         </div><!-- end container -->
     </div><!-- end breadcrumb-wrap -->
@@ -33,7 +53,8 @@
             <polygon points="100 0 50 10 0 0 0 10 100 10"></polygon>
         </svg>
     </div><!-- end bread-svg -->
-</section><!-- end breadcrumb-area -->
+</section>
+<!-- end breadcrumb-area -->
 <!-- ================================
     END BREADCRUMB AREA
 ================================= -->
@@ -44,190 +65,8 @@
 <section class="card-area section--padding">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="filter-wrap margin-bottom-30px">
-                    <div class="filter-top d-flex align-items-center justify-content-between pb-4">
-                        <div>
-                            <h3 class="title font-size-24">2224 Hotels found</h3>
-                            <p class="font-size-14"><span class="mr-1 pt-1">Book with confidence:</span>No hotel booking
-                                fees</p>
-                        </div>
-                        <div class="layout-view d-flex align-items-center">
-                            <a href="hotel-grid.html" data-toggle="tooltip" data-placement="top" title="Grid View"
-                                class="active"><i class="la la-th-large"></i></a>
-                            <a href="hotel-list.html" data-toggle="tooltip" data-placement="top" title="List View"><i
-                                    class="la la-th-list"></i></a>
-                        </div>
-                    </div><!-- end filter-top -->
-                    <div class="filter-bar d-flex align-items-center justify-content-between">
-                        <div class="filter-bar-filter d-flex flex-wrap align-items-center">
-                            <div class="filter-option">
-                                <h3 class="title font-size-16">Filter by:</h3>
-                            </div>
-                            <div class="filter-option">
-                                <div class="dropdown dropdown-contain">
-                                    <a class="dropdown-toggle dropdown-btn dropdown--btn" href="#" role="button"
-                                        data-toggle="dropdown">
-                                        Filter Price
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-wrap">
-                                        <div class="dropdown-item">
-                                            <div class="slider-range-wrap">
-                                                <div class="price-slider-amount padding-bottom-20px">
-                                                    <label for="amount" class="filter__label">Price:</label>
-                                                    <input type="text" id="amount" class="amounts">
-                                                </div><!-- end price-slider-amount -->
-                                                <div id="slider-range"></div><!-- end slider-range -->
-                                            </div><!-- end slider-range-wrap -->
-                                            <div class="btn-box pt-4">
-                                                <button class="theme-btn theme-btn-small theme-btn-transparent"
-                                                    type="button">Apply</button>
-                                            </div>
-                                        </div><!-- end dropdown-item -->
-                                    </div><!-- end dropdown-menu -->
-                                </div><!-- end dropdown -->
-                            </div>
-                            <div class="filter-option">
-                                <div class="dropdown dropdown-contain">
-                                    <a class="dropdown-toggle dropdown-btn dropdown--btn" href="#" role="button"
-                                        data-toggle="dropdown">
-                                        Review Score
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-wrap">
-                                        <div class="dropdown-item">
-                                            <div class="checkbox-wrap">
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="r1">
-                                                    <label for="r1">
-                                                        <span class="ratings d-flex align-items-center">
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <span class="color-text-3 font-size-13 ml-1">(55.590)</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="r2">
-                                                    <label for="r2">
-                                                        <span class="ratings d-flex align-items-center">
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <span class="color-text-3 font-size-13 ml-1">(40.590)</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="r3">
-                                                    <label for="r3">
-                                                        <span class="ratings d-flex align-items-center">
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <span class="color-text-3 font-size-13 ml-1">(23.590)</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="r4">
-                                                    <label for="r4">
-                                                        <span class="ratings d-flex align-items-center">
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <span class="color-text-3 font-size-13 ml-1">(12.590)</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="r5">
-                                                    <label for="r5">
-                                                        <span class="ratings d-flex align-items-center">
-                                                            <i class="la la-star"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <i class="la la-star-o"></i>
-                                                            <span class="color-text-3 font-size-13 ml-1">(590)</span>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div><!-- end dropdown-item -->
-                                    </div><!-- end dropdown-menu -->
-                                </div><!-- end dropdown -->
-                            </div>
-                            <div class="filter-option">
-                                <div class="dropdown dropdown-contain">
-                                    <a class="dropdown-toggle dropdown-btn dropdown--btn" href="#" role="button"
-                                        data-toggle="dropdown">
-                                        Facilities
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-wrap">
-                                        <div class="dropdown-item">
-                                            <div class="checkbox-wrap">
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb1">
-                                                    <label for="catChb1">Pet Allowed</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb2">
-                                                    <label for="catChb2">Groups Allowed</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb3">
-                                                    <label for="catChb3">Tour Guides</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb4">
-                                                    <label for="catChb4">Access for disabled</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb5">
-                                                    <label for="catChb5">Room Service</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb6">
-                                                    <label for="catChb6">Parking</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb7">
-                                                    <label for="catChb7">Restaurant</label>
-                                                </div>
-                                                <div class="custom-checkbox">
-                                                    <input type="checkbox" id="catChb8">
-                                                    <label for="catChb8">Pet friendly</label>
-                                                </div>
-                                            </div>
-                                        </div><!-- end dropdown-item -->
-                                    </div><!-- end dropdown-menu -->
-                                </div><!-- end dropdown -->
-                            </div>
-                        </div><!-- end filter-bar-filter -->
-                        <div class="select-contain">
-                            <select class="select-contain-select">
-                                <option value="1">Short by default</option>
-                                <option value="2">Popular Hotel</option>
-                                <option value="3">Price: low to high</option>
-                                <option value="4">Price: high to low</option>
-                                <option value="5">A to Z</option>
-                            </select>
-                        </div><!-- end select-contain -->
-                    </div><!-- end filter-bar -->
-                </div><!-- end filter-wrap -->
-            </div><!-- end col-lg-12 -->
-        </div><!-- end row -->
-        <div class="row">
             {{-- List --}}
+            @if ($hotels->count())
             @foreach ($hotels as $hotel)
             <div class="col-lg-4 responsive-column">
                 <div class="card-item">
@@ -246,6 +85,7 @@
                         <h3 class="card-title"><a href="/hotel-rooms/{{ $hotel->id }}">{{ $hotel->title }}</a></h3>
                         <p class="card-meta">{{ $hotel->address }}</p>
                         <p class="card-meta">Post By : {{ $hotel->user->name }}</p>
+                        <?php $min = collect($hotel->rooms)->min('price'); ?>
                         <div class="card-rating">
                             <span class="badge text-white">4.4/5</span>
                             <span class="review__text">Average</span>
@@ -253,8 +93,8 @@
                         </div>
                         <div class="card-price d-flex align-items-center justify-content-between">
                             <p>
-                                <span class="price__from">From</span>
-                                <span class="price__num">$88.00</span>
+                                <span class="price__from">Start Price</span>
+                                <span class="price__num">Rp.{{ number_format($min,0,',','.') }}</span>
                                 <span class="price__text">Per night</span>
                             </p>
                             <a href="hotel-single.html" class="btn-text">See details<i
@@ -270,12 +110,23 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="btn-box mt-3 text-center">
-                    <button type="button" class="theme-btn"><i class="la la-refresh mr-1"></i>Load More</button>
-                    <p class="font-size-13 pt-2">Showing 1 - 6 of 2224 Hotels</p>
+                    {{ $hotels->links() }}
                 </div><!-- end btn-box -->
             </div><!-- end col-lg-12 -->
         </div><!-- end row -->
     </div><!-- end container -->
+        @else
+        </div>
+        <!-- end row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="btn-box mt-3 text-center">
+                    <button type="button" class="theme-btn"><i class="la la-refresh mr-1"></i>Not Found</button>
+                </div><!-- end btn-box -->
+            </div><!-- end col-lg-12 -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+    @endif
 </section><!-- end card-area -->
 <!-- ================================
     END CARD AREA

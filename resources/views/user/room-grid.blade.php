@@ -95,13 +95,13 @@
                             </div>
                             <div class="card-body">
                                 <div class="card-price pb-2">
-                                    <p>
-                                        <span class="price__from">From</span>
-                                        <span class="price__num">Rp. {{ number_format($room->price,0,'.',',') }}</span>
-                                    </p>
+                                    
                                 </div>
                                 <h3 class="card-title font-size-26"><a href="room-details.html">{{ $room->title }}</a>
                                 </h3>
+                                <p>
+                                    <span class="price__num">Rp. {{ number_format($room->price,0,'.',',') }}</span>
+                                </p>
                                 <p class="card-text pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     Aperiam asperiores commodi deleniti hic inventore laboriosam laborum molestias, non
                                     odit quaerat! Aperiam culpa facilis fuga impedit.</p>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreHotelRequest;
 use App\Http\Requests\UpdateHotelRequest;
 use App\Models\Hotel;
+use App\Models\Room;
 use Illuminate\Routing\Controller;
 
 class HotelController extends Controller
@@ -16,11 +17,12 @@ class HotelController extends Controller
      */
     public function index()
     {
+        $hotel = Hotel::with(['user', 'rooms'])->latest();
         return view(
             'user/hotel-grid',
             [
                 "title" => 'Hotel List',
-                "hotels" => Hotel::all()
+                "hotels" => Hotel::latest()->filter(request(['search']))->paginate(12)->withQueryString()
             ]
         );
     }
