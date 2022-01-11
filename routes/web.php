@@ -6,6 +6,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\UserController;
 use App\Models\Hotel;
 use App\Models\Room;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::get('/hotel-grid', [HotelController::class, 'index']);
 // Route::get('/hotel-detail/{hotel}', [HotelController::class, 'show']);
 
 Route::get('/hotel-rooms/{hotel}', [RoomController::class, 'viewRoom']);
+
+Route::get('/user-dashboard', [UserController::class, 'index']);
