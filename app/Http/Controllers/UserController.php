@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     public function index()
     {
-        return view('/user/user-dashboard');
+        return view('user.index');
     }
-    public function store(Request $request)
+    public function register(Request $request)
     {
         $validateData = $request->validate([
             'name' => 'required|max:255',
@@ -23,20 +24,24 @@ class UserController extends Controller
 
         return redirect('/')->with('sukses', 'Registration Succsessfull!');
     }
-    // public function store(Request $request)
-    // {
-    //     $this->validate($request, [
-    //         'name' => 'required',
-    //         'email' => 'required',
-    //         'password' => 'required',
-    //         'repassword' => 'required',
-    //     ]);
-    //     $register = new User;
-    //     $register->name = $request->input('name');
-    //     $register->email = $request->input('email');
-    //     $register->password = $request->input('password');
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-    //     $register->save();
-    //     return redirect('/')->with('sukses', 'data saved');
-    // }
+            return redirect()->intended('/user-dashboard');
+        }
+        return back()->with('loginFailed', 'Login Failed!');
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
+    }
 }

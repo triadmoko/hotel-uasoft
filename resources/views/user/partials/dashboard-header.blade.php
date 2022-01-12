@@ -83,7 +83,7 @@
                                         <a href="#" class="dropdown-toggle" id="userDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <div class="d-flex align-items-center">
                                                 <div class="avatar avatar-sm flex-shrink-0 mr-2"><img src="/user-asset/images/team8.jpg" alt="team-img"></div>
-                                                <span class="font-size-14 font-weight-bold">Triadmoko Denny Fatrosa</span>
+                                                <span class="font-size-14 font-weight-bold">{{ auth()->user()->name }}</span>
                                             </div>
                                         </a>
                                         <div class="dropdown-menu dropdown-reveal dropdown-menu-md dropdown-menu-right">

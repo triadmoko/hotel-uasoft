@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\HotelDetailController;
 use App\Http\Controllers\RoomController;
@@ -20,17 +21,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.index');
-});
+Route::get('/', [UserController::class, 'index'])->name('login')->middleware('guest');
 
 Route::get('/hotel-grid', [HotelController::class, 'index']);
-
 // Route::get('/hotel-detail/{hotel}', [HotelController::class, 'show']);
-
 Route::get('/hotel-rooms/{hotel}', [RoomController::class, 'viewRoom']);
-
 Route::get('/room-details/{room}', [RoomController::class, 'show']);
-
-Route::get('/user-dashboard', [UserController::class, 'index']);
-Route::post('/register', [UserController::class, 'store']);
+Route::get('/user-dashboard', [Dashboard::class, 'index'])->middleware('auth');
+Route::post('/register', [UserController::class, 'register']);
+Route::post('/login', [UserController::class, 'login']);
+Route::post('/logout', [UserController::class, 'logout']);

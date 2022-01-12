@@ -18,23 +18,54 @@
                             <div class="header-right-action">
                                 <div class="select-contain select--contain w-auto">
                                     <select class="select-contain-select">
-                                        <option data-content='<span class="flag-icon flag-icon-id mr-1"></span> Bahasa Indonesia'>Bahasa Indonesia</option>
-                                        <option data-content='<span class="flag-icon flag-icon-de mr-1"></span> Deutsch'>Deutsch</option>
-                                        <option data-content='<span class="flag-icon flag-icon-us mr-1"></span> English(US)' selected>English US</option>
-                                        <option data-content='<span class="flag-icon flag-icon-gb-eng mr-1"></span> English(UK)'>English UK</option>
-                                        <option data-content='<span class="flag-icon flag-icon-ro mr-1"></span> Romanian'>Romanian</option>
-                                        <option data-content='<span class="flag-icon flag-icon-es mr-1"></span> Español'>Español</option>
-                                        <option data-content='<span class="flag-icon flag-icon-fr mr-1"></span> Francais'>Francais</option>
-                                        <option data-content='<span class="flag-icon flag-icon-it mr-1"></span> Italiano'>Italiano</option>
-                                        <option data-content='<span class="flag-icon flag-icon-pl mr-1"></span> Polski'>Polski</option>
-                                        <option data-content='<span class="flag-icon flag-icon-pt mr-1"></span> Portuguese'>Portuguese</option>
-                                        <option data-content='<span class="flag-icon flag-icon-tr mr-1"></span> Turkish'>Turkish</option>
-                                        <option data-content='<span class="flag-icon flag-icon-ru mr-1"></span> Russian'>Russian</option>
-                                        <option data-content='<span class="flag-icon flag-icon-jp mr-1"></span> Japanese'>Japanese</option>
-                                        <option data-content='<span class="flag-icon flag-icon-cn mr-1"></span> Mandarin'>Mandarin</option>
-                                        <option data-content='<span class="flag-icon flag-icon-tw mr-1"></span> Mandarin Chinese'>Mandarin Chinese</option>
-                                        <option data-content='<span class="flag-icon flag-icon-kr mr-1"></span> Korean'>Korean</option>
-                                        <option data-content='<span class="flag-icon flag-icon-in mr-1"></span> Hindi'>Hindi</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-id mr-1"></span> Bahasa Indonesia'>
+                                            Bahasa Indonesia</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-de mr-1"></span> Deutsch'>
+                                            Deutsch</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-us mr-1"></span> English(US)'
+                                            selected>English US</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-gb-eng mr-1"></span> English(UK)'>
+                                            English UK</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-ro mr-1"></span> Romanian'>
+                                            Romanian</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-es mr-1"></span> Español'>
+                                            Español</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-fr mr-1"></span> Francais'>
+                                            Francais</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-it mr-1"></span> Italiano'>
+                                            Italiano</option>
+                                        <option data-content='<span class="flag-icon flag-icon-pl mr-1"></span> Polski'>
+                                            Polski</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-pt mr-1"></span> Portuguese'>
+                                            Portuguese</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-tr mr-1"></span> Turkish'>
+                                            Turkish</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-ru mr-1"></span> Russian'>
+                                            Russian</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-jp mr-1"></span> Japanese'>
+                                            Japanese</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-cn mr-1"></span> Mandarin'>
+                                            Mandarin</option>
+                                        <option
+                                            data-content='<span class="flag-icon flag-icon-tw mr-1"></span> Mandarin Chinese'>
+                                            Mandarin Chinese</option>
+                                        <option data-content='<span class="flag-icon flag-icon-kr mr-1"></span> Korean'>
+                                            Korean</option>
+                                        <option data-content='<span class="flag-icon flag-icon-in mr-1"></span> Hindi'>
+                                            Hindi</option>
                                     </select>
                                 </div>
                             </div>
@@ -72,10 +103,22 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="header-right-action">
-                                <a href="#" class="theme-btn theme-btn-small theme-btn-transparent mr-1" data-toggle="modal" data-target="#signupPopupForm">Sign Up</a>
-                                 <a href="#" class="theme-btn theme-btn-small" data-toggle="modal" data-target="#loginPopupForm">Login</a>
-                            </div>
+                            @auth
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <div class="header-right-action">
+                                        <button type="submit" class="theme-btn theme-btn-small"> Log Out</button>
+                                    </div>
+                                </form>
+                            @else
+                                <div class="header-right-action">
+                                    <a href="#" class="theme-btn theme-btn-small theme-btn-transparent mr-1"
+                                        data-toggle="modal" data-target="#signupPopupForm">Sign Up</a>
+                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
+                                        data-target="#loginPopupForm">Login</a>
+                                </div>
+                            @endauth
+
                         </div>
                     </div>
                 </div>
@@ -138,14 +181,17 @@
                                                         <li><a href="add-car.html">add car</a></li>
                                                         <li><a href="user-dashboard.html">User Dashboard</a></li>
                                                         <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-                                                        <li><a href="career.html">career <span class="badge bg-2 text-white">New</span></a></li>
+                                                        <li><a href="career.html">career <span
+                                                                    class="badge bg-2 text-white">New</span></a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="col-lg-3 mega-menu-item">
                                                     <ul>
-                                                        <li><a href="career-details.html">career details<span class="badge bg-2 text-white">New</span></a></li>
+                                                        <li><a href="career-details.html">career details<span
+                                                                    class="badge bg-2 text-white">New</span></a></li>
                                                         <li><a href="user-profile.html">User profile</a></li>
-                                                        <li><a href="become-local-expert.html">Become Local Expert</a></li>
+                                                        <li><a href="become-local-expert.html">Become Local Expert</a>
+                                                        </li>
                                                         <li><a href="contact.html">contact</a></li>
                                                         <li><a href="cart.html">Cart</a></li>
                                                         <li><a href="checkout.html">Checkout</a></li>
@@ -191,7 +237,7 @@
                                     </li>
                                     <li>
                                         <a href="/hotel-grid">Hotel</a>
-                                       
+
                                     </li>
                                     <li>
                                         <a href="#">car <i class="la la-angle-down"></i></a>
@@ -208,7 +254,7 @@
                             </nav>
                         </div><!-- end main-menu-content -->
                         <div class="nav-btn">
-                            <a href="become-local-expert.html" class="theme-btn">Become Local Expert</a>
+                            <a href="/user-dashboard" class="theme-btn">Dashboard</a>
                         </div><!-- end nav-btn -->
                     </div><!-- end menu-wrapper -->
                 </div><!-- end col-lg-12 -->

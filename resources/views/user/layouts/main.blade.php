@@ -44,6 +44,11 @@
         alert("{{ session('sukses') }}")
     </script>
     @endif
+    @if (session()->has('loginFailed'))
+    <script>
+        alert("{{ session('loginFailed') }}")
+    </script>
+    @endif
     <!-- ================================
             START HEADER AREA
 ================================= -->
@@ -149,21 +154,28 @@
                     </div>
                     <div class="modal-body">
                         <div class="contact-form-action">
-                            <form method="post">
+                            <form method="post" action="/login">
+                                @csrf
                                 <div class="input-box">
-                                    <label class="label-text">Username</label>
+                                    <label class="label-text">Email</label>
                                     <div class="form-group">
                                         <span class="la la-user form-icon"></span>
-                                        <input class="form-control" type="text" name="text"
-                                            placeholder="Type your username">
+                                        <input class="form-control @error('email') is-invalid @enderror" type="email"  name="email"
+                                            placeholder="Type your username" autofocus required value="{{ old('email') }}">
+                                            @error('email')
+                                                {{ $message }}
+                                            @enderror
                                     </div>
                                 </div><!-- end input-box -->
                                 <div class="input-box">
                                     <label class="label-text">Password</label>
                                     <div class="form-group mb-2">
                                         <span class="la la-lock form-icon"></span>
-                                        <input class="form-control" type="text" name="text"
-                                            placeholder="Type your password">
+                                        <input class="form-control @error('email') is-invalid @enderror" type="password" name="password"
+                                            placeholder="Type your password" required >
+                                            @error('password')
+                                                {{ $message }}
+                                            @enderror
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="custom-checkbox mb-0">
@@ -176,19 +188,7 @@
                                     </div>
                                 </div><!-- end input-box -->
                                 <div class="btn-box pt-3 pb-4">
-                                    <button type="button" class="theme-btn w-100">Login Account</button>
-                                </div>
-                                <div class="action-box text-center">
-                                    <p class="font-size-14">Or Login Using</p>
-                                    <ul class="social-profile py-3">
-                                        <li><a href="#" class="bg-5 text-white"><i class="lab la-facebook-f"></i></a>
-                                        </li>
-                                        <li><a href="#" class="bg-6 text-white"><i class="lab la-twitter"></i></a></li>
-                                        <li><a href="#" class="bg-7 text-white"><i class="lab la-instagram"></i></a>
-                                        </li>
-                                        <li><a href="#" class="bg-5 text-white"><i class="lab la-linkedin-in"></i></a>
-                                        </li>
-                                    </ul>
+                                    <button type="submit" class="theme-btn w-100">Login Account</button>
                                 </div>
                             </form>
                         </div><!-- end contact-form-action -->
