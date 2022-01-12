@@ -30,4 +30,7 @@ Route::get('/hotel-grid', [HotelController::class, 'index']);
 
 Route::get('/hotel-rooms/{hotel}', [RoomController::class, 'viewRoom']);
 
+Route::get('/room-details/{room}', [RoomController::class, 'show']);
+
 Route::get('/user-dashboard', [UserController::class, 'index']);
+Route::post('/register', [UserController::class, 'store']);

@@ -47,9 +47,9 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        return view('user/room-grid', [
+        return view('user/room-details', [
             'title' => 'Hotel Rooms',
-            'rooms' => $room->rooms
+            'room' => $room
         ]);
     }
     public function viewRoom(Hotel $hotel)

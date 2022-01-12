@@ -87,7 +87,7 @@
                         <div class="card-item room-card">
                             <div class="card-img-carousel carousel-action carousel--action">
                                 <div class="card-img">
-                                    <a href="room-details.html" class="d-block">
+                                    <a href="/room-details/{{ $room->id }}" class="d-block">
                                         {{-- url image /user-asset/images/ --}}
                                         <img src="{{ $room->image }}" alt="{{ $room->title }}">
                                     </a>
