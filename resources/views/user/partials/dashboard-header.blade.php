@@ -14,16 +14,6 @@
                                 <i class="la la-user"></i>
                             </div><!-- end user-menu-open -->
                         </div>
-                        <div class="dashboard-search-box">
-                            <div class="contact-form-action">
-                                <form action="#">
-                                    <div class="form-group mb-0">
-                                        <input class="form-control" type="text" name="text" placeholder="Search">
-                                        <button class="search-btn"><i class="la la-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                         <div class="nav-btn ml-auto">
                             <div class="notification-wrap d-flex align-items-center">
                                 <div class="notification-item mr-2">

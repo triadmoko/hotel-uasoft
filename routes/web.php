@@ -33,4 +33,6 @@ Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
 
+
+Route::post('/booking', [UserController::class, 'booking'])->middleware('auth');
 Route::resource('/user-dashboard/hotel', BookController::class)->middleware('auth');

@@ -87,9 +87,8 @@
                         <p class="card-meta">Post By : {{ $hotel->user->name }}</p>
                         <?php $min = collect($hotel->rooms)->min('price'); ?>
                         <div class="card-rating">
-                            <span class="badge text-white">4.4/5</span>
-                            <span class="review__text">Average</span>
-                            <span class="rating__text">(30 Reviews)</span>
+                            <span class="badge text-white">{{ $hotel->total_rooms }}</span>
+                            <span class="review__text">Room</span>
                         </div>
                         <div class="card-price d-flex align-items-center justify-content-between">
                             <p>
@@ -97,7 +96,7 @@
                                 <span class="price__num">Rp.{{ number_format($min,0,',','.') }}</span>
                                 <span class="price__text">Per night</span>
                             </p>
-                            <a href="hotel-single.html" class="btn-text">See details<i
+                            <a href="/hotel-rooms/{{ $hotel->id }}" class="btn-text">See details<i
                                     class="la la-angle-right"></i></a>
                         </div>
                     </div>

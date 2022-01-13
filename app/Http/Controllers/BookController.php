@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Hotel;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 class BookController extends Controller
 {
@@ -29,17 +30,25 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.user-dashboard-input-hotel');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreBookRequest  $request
+     * @param  \App\Http\Requests\RequestStack  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreBookRequest $request)
+    public function store(Request $request)
     {
+        $validateData = $request->validate([
+            'title' => 'required',
+            'address' => 'required',
+            'total_rooms' => 'required',
+        ]);
+        $validateData['user_id'] = auth()->user()->id;
+        Hotel::create($validateData);
+        return redirect('/user-dashboard/hotel/create')->with('input_hotel', 'Insert Hotel Successfully!!');
     }
 
     /**

@@ -6,11 +6,6 @@
 ================================= -->
 <section class="room-detail-bread">
     <div class="full-width-slider carousel-action owl-loaded owl-carousel">
-        <!-- end full-width-slide-item -->
-        <!-- end full-width-slide-item -->
-        <!-- end full-width-slide-item -->
-        <!-- end full-width-slide-item -->
-        <!-- end full-width-slide-item -->
         <div class="owl-stage-outer">
             <div class="owl-stage"
                 style="transition: all 0s ease 0s; width: 5016px; transform: translate3d(-1140px, 0px, 0px);">
@@ -85,8 +80,6 @@
                                     class="scroll-link active">Description</a></li>
                             <li><a data-scroll="services" href="#services" class="scroll-link">Services</a></li>
                             <li><a data-scroll="amenities" href="#amenities" class="scroll-link">Amenities</a></li>
-                            <li><a data-scroll="location-map" href="#location-map" class="scroll-link">Map</a></li>
-                            <li><a data-scroll="reviews" href="#reviews" class="scroll-link">Reviews</a></li>
                         </ul>
                     </div>
                 </div>
@@ -365,392 +358,29 @@
                             </div><!-- end single-content-item -->
                             <div class="section-block"></div>
                         </div><!-- end itinerary -->
-                        <div id="reviews" class="page-scroll">
-                            <div class="single-content-item padding-top-40px padding-bottom-40px">
-                                <h3 class="title font-size-20">Reviews</h3>
-                                <div class="review-container padding-top-30px">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-4">
-                                            <div class="review-summary">
-                                                <h2>4.5<span>/5</span></h2>
-                                                <p>Excellent</p>
-                                                <span>Based on 4 reviews</span>
-                                            </div>
-                                        </div><!-- end col-lg-4 -->
-                                        <div class="col-lg-8">
-                                            <div class="review-bars">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="progress-item">
-                                                            <h3 class="progressbar-title">Service</h3>
-                                                            <div
-                                                                class="progressbar-content line-height-20 d-flex align-items-center justify-content-between">
-                                                                <div class="progressbar-box flex-shrink-0">
-                                                                    <div class="progressbar-line" data-percent="70%">
-                                                                        <div class="progressbar-line-item bar-bg-1">
-                                                                        </div>
-                                                                    </div> <!-- End Skill Bar -->
-                                                                </div>
-                                                                <div class="bar-percent">4.6</div>
-                                                            </div>
-                                                        </div><!-- end progress-item -->
-                                                    </div><!-- end col-lg-6 -->
-                                                    <div class="col-lg-6">
-                                                        <div class="progress-item">
-                                                            <h3 class="progressbar-title">Location</h3>
-                                                            <div
-                                                                class="progressbar-content line-height-20 d-flex align-items-center justify-content-between">
-                                                                <div class="progressbar-box flex-shrink-0">
-                                                                    <div class="progressbar-line" data-percent="55%">
-                                                                        <div class="progressbar-line-item bar-bg-2">
-                                                                        </div>
-                                                                    </div> <!-- End Skill Bar -->
-                                                                </div>
-                                                                <div class="bar-percent">4.7</div>
-                                                            </div>
-                                                        </div><!-- end progress-item -->
-                                                    </div><!-- end col-lg-6 -->
-                                                    <div class="col-lg-6">
-                                                        <div class="progress-item">
-                                                            <h3 class="progressbar-title">Value for Money</h3>
-                                                            <div
-                                                                class="progressbar-content line-height-20 d-flex align-items-center justify-content-between">
-                                                                <div class="progressbar-box flex-shrink-0">
-                                                                    <div class="progressbar-line" data-percent="40%">
-                                                                        <div class="progressbar-line-item bar-bg-3">
-                                                                        </div>
-                                                                    </div> <!-- End Skill Bar -->
-                                                                </div>
-                                                                <div class="bar-percent">2.6</div>
-                                                            </div>
-                                                        </div><!-- end progress-item -->
-                                                    </div><!-- end col-lg-6 -->
-                                                    <div class="col-lg-6">
-                                                        <div class="progress-item">
-                                                            <h3 class="progressbar-title">Cleanliness</h3>
-                                                            <div
-                                                                class="progressbar-content line-height-20 d-flex align-items-center justify-content-between">
-                                                                <div class="progressbar-box flex-shrink-0">
-                                                                    <div class="progressbar-line" data-percent="60%">
-                                                                        <div class="progressbar-line-item bar-bg-4">
-                                                                        </div>
-                                                                    </div> <!-- End Skill Bar -->
-                                                                </div>
-                                                                <div class="bar-percent">3.6</div>
-                                                            </div>
-                                                        </div><!-- end progress-item -->
-                                                    </div><!-- end col-lg-6 -->
-                                                    <div class="col-lg-6">
-                                                        <div class="progress-item">
-                                                            <h3 class="progressbar-title">Facilities</h3>
-                                                            <div
-                                                                class="progressbar-content line-height-20 d-flex align-items-center justify-content-between">
-                                                                <div class="progressbar-box flex-shrink-0">
-                                                                    <div class="progressbar-line" data-percent="50%">
-                                                                        <div class="progressbar-line-item bar-bg-5">
-                                                                        </div>
-                                                                    </div> <!-- End Skill Bar -->
-                                                                </div>
-                                                                <div class="bar-percent">2.6</div>
-                                                            </div>
-                                                        </div><!-- end progress-item -->
-                                                    </div><!-- end col-lg-6 -->
-                                                </div><!-- end row -->
-                                            </div>
-                                        </div><!-- end col-lg-8 -->
-                                    </div>
-                                </div>
-                            </div><!-- end single-content-item -->
-                            <div class="section-block"></div>
-                        </div><!-- end reviews -->
-                        <div class="review-box">
-                            <div class="single-content-item padding-top-40px">
-                                <h3 class="title font-size-20">Showing 3 guest reviews</h3>
-                                <div class="comments-list padding-top-50px">
-                                    <div class="comment">
-                                        <div class="comment-avatar">
-                                            <img class="avatar__img" alt="" src="/user-asset/images/team8.jpg">
-                                        </div>
-                                        <div class="comment-body">
-                                            <div class="meta-data">
-                                                <h3 class="comment__author">Jenny Doe</h3>
-                                                <div class="meta-data-inner d-flex">
-                                                    <span class="ratings d-flex align-items-center mr-1">
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                    </span>
-                                                    <p class="comment__date">April 5, 2019</p>
-                                                </div>
-                                            </div>
-                                            <p class="comment-content">
-                                                Lorem ipsum dolor sit amet, dolores mandamus moderatius ea ius, sed
-                                                civibus vivendum imperdiet ei, amet tritani sea id. Ut veri diceret
-                                                fierent mei, qui facilisi suavitate euripidis
-                                            </p>
-                                            <div
-                                                class="comment-reply d-flex align-items-center justify-content-between">
-                                                <a class="theme-btn" href="#" data-toggle="modal"
-                                                    data-target="#replayPopupForm">
-                                                    <span class="la la-mail-reply mr-1"></span>Reply
-                                                </a>
-                                                <div class="reviews-reaction">
-                                                    <a href="#" class="comment-like"><i class="la la-thumbs-up"></i>
-                                                        13</a>
-                                                    <a href="#" class="comment-dislike"><i
-                                                            class="la la-thumbs-down"></i> 2</a>
-                                                    <a href="#" class="comment-love"><i class="la la-heart-o"></i> 5</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- end comments -->
-                                    <div class="comment comment-reply-item">
-                                        <div class="comment-avatar">
-                                            <img class="avatar__img" alt="" src="/user-asset/images/team9.jpg">
-                                        </div>
-                                        <div class="comment-body">
-                                            <div class="meta-data">
-                                                <h3 class="comment__author">Jenny Doe</h3>
-                                                <div class="meta-data-inner d-flex">
-                                                    <span class="ratings d-flex align-items-center mr-1">
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                    </span>
-                                                    <p class="comment__date">April 5, 2019</p>
-                                                </div>
-                                            </div>
-                                            <p class="comment-content">
-                                                Lorem ipsum dolor sit amet, dolores mandamus moderatius ea ius, sed
-                                                civibus vivendum imperdiet ei, amet tritani sea id. Ut veri diceret
-                                                fierent mei, qui facilisi suavitate euripidis
-                                            </p>
-                                            <div
-                                                class="comment-reply d-flex align-items-center justify-content-between">
-                                                <a class="theme-btn" href="#" data-toggle="modal"
-                                                    data-target="#replayPopupForm">
-                                                    <span class="la la-mail-reply mr-1"></span>Reply
-                                                </a>
-                                                <div class="reviews-reaction">
-                                                    <a href="#" class="comment-like"><i class="la la-thumbs-up"></i>
-                                                        13</a>
-                                                    <a href="#" class="comment-dislike"><i
-                                                            class="la la-thumbs-down"></i> 2</a>
-                                                    <a href="#" class="comment-love"><i class="la la-heart-o"></i> 5</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- end comments -->
-                                    <div class="comment">
-                                        <div class="comment-avatar">
-                                            <img class="avatar__img" alt="" src="/user-asset/images/team10.jpg">
-                                        </div>
-                                        <div class="comment-body">
-                                            <div class="meta-data">
-                                                <h3 class="comment__author">Jenny Doe</h3>
-                                                <div class="meta-data-inner d-flex">
-                                                    <span class="ratings d-flex align-items-center mr-1">
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                        <i class="la la-star"></i>
-                                                    </span>
-                                                    <p class="comment__date">April 5, 2019</p>
-                                                </div>
-                                            </div>
-                                            <p class="comment-content">
-                                                Lorem ipsum dolor sit amet, dolores mandamus moderatius ea ius, sed
-                                                civibus vivendum imperdiet ei, amet tritani sea id. Ut veri diceret
-                                                fierent mei, qui facilisi suavitate euripidis
-                                            </p>
-                                            <div
-                                                class="comment-reply d-flex align-items-center justify-content-between">
-                                                <a class="theme-btn" href="#" data-toggle="modal"
-                                                    data-target="#replayPopupForm">
-                                                    <span class="la la-mail-reply mr-1"></span>Reply
-                                                </a>
-                                                <div class="reviews-reaction">
-                                                    <a href="#" class="comment-like"><i class="la la-thumbs-up"></i>
-                                                        13</a>
-                                                    <a href="#" class="comment-dislike"><i
-                                                            class="la la-thumbs-down"></i> 2</a>
-                                                    <a href="#" class="comment-love"><i class="la la-heart-o"></i> 5</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- end comments -->
-                                    <div class="btn-box load-more text-center">
-                                        <button class="theme-btn theme-btn-small theme-btn-transparent"
-                                            type="button">Load More Review</button>
-                                    </div>
-                                </div><!-- end comments-list -->
-                                <div class="comment-forum padding-top-40px">
-                                    <div class="form-box">
-                                        <div class="form-title-wrap">
-                                            <h3 class="title">Write a Review</h3>
-                                        </div><!-- form-title-wrap -->
-                                        <div class="form-content">
-                                            <div class="rate-option p-2">
-                                                <div class="row">
-                                                    <div class="col-lg-4 responsive-column">
-                                                        <div class="rate-option-item">
-                                                            <label>Service</label>
-                                                            <div class="rate-stars-option">
-                                                                <input type="checkbox" id="lst1" value="1">
-                                                                <label for="lst1"></label>
-                                                                <input type="checkbox" id="lst2" value="2">
-                                                                <label for="lst2"></label>
-                                                                <input type="checkbox" id="lst3" value="3">
-                                                                <label for="lst3"></label>
-                                                                <input type="checkbox" id="lst4" value="4">
-                                                                <label for="lst4"></label>
-                                                                <input type="checkbox" id="lst5" value="5">
-                                                                <label for="lst5"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- col-lg-4 -->
-                                                    <div class="col-lg-4 responsive-column">
-                                                        <div class="rate-option-item">
-                                                            <label>Location</label>
-                                                            <div class="rate-stars-option">
-                                                                <input type="checkbox" id="l1" value="1">
-                                                                <label for="l1"></label>
-                                                                <input type="checkbox" id="l2" value="2">
-                                                                <label for="l2"></label>
-                                                                <input type="checkbox" id="l3" value="3">
-                                                                <label for="l3"></label>
-                                                                <input type="checkbox" id="l4" value="4">
-                                                                <label for="l4"></label>
-                                                                <input type="checkbox" id="l5" value="5">
-                                                                <label for="l5"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- col-lg-4 -->
-                                                    <div class="col-lg-4 responsive-column">
-                                                        <div class="rate-option-item">
-                                                            <label>Value for Money</label>
-                                                            <div class="rate-stars-option">
-                                                                <input type="checkbox" id="vm1" value="1">
-                                                                <label for="vm1"></label>
-                                                                <input type="checkbox" id="vm2" value="2">
-                                                                <label for="vm2"></label>
-                                                                <input type="checkbox" id="vm3" value="3">
-                                                                <label for="vm3"></label>
-                                                                <input type="checkbox" id="vm4" value="4">
-                                                                <label for="vm4"></label>
-                                                                <input type="checkbox" id="vm5" value="5">
-                                                                <label for="vm5"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- col-lg-4 -->
-                                                    <div class="col-lg-4 responsive-column">
-                                                        <div class="rate-option-item">
-                                                            <label>Cleanliness</label>
-                                                            <div class="rate-stars-option">
-                                                                <input type="checkbox" id="cln1" value="1">
-                                                                <label for="cln1"></label>
-                                                                <input type="checkbox" id="cln2" value="2">
-                                                                <label for="cln2"></label>
-                                                                <input type="checkbox" id="cln3" value="3">
-                                                                <label for="cln3"></label>
-                                                                <input type="checkbox" id="cln4" value="4">
-                                                                <label for="cln4"></label>
-                                                                <input type="checkbox" id="cln5" value="5">
-                                                                <label for="cln5"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- col-lg-4 -->
-                                                    <div class="col-lg-4 responsive-column">
-                                                        <div class="rate-option-item">
-                                                            <label>Facilities</label>
-                                                            <div class="rate-stars-option">
-                                                                <input type="checkbox" id="f1" value="1">
-                                                                <label for="f1"></label>
-                                                                <input type="checkbox" id="f2" value="2">
-                                                                <label for="f2"></label>
-                                                                <input type="checkbox" id="f3" value="3">
-                                                                <label for="f3"></label>
-                                                                <input type="checkbox" id="f4" value="4">
-                                                                <label for="f4"></label>
-                                                                <input type="checkbox" id="f5" value="5">
-                                                                <label for="f5"></label>
-                                                            </div>
-                                                        </div>
-                                                    </div><!-- col-lg-4 -->
-                                                </div><!-- end row -->
-                                            </div><!-- end rate-option -->
-                                            <div class="contact-form-action">
-                                                <form method="post">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 responsive-column">
-                                                            <div class="input-box">
-                                                                <label class="label-text">Name</label>
-                                                                <div class="form-group">
-                                                                    <span class="la la-user form-icon"></span>
-                                                                    <input class="form-control" type="text" name="text"
-                                                                        placeholder="Your name">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 responsive-column">
-                                                            <div class="input-box">
-                                                                <label class="label-text">Email</label>
-                                                                <div class="form-group">
-                                                                    <span class="la la-envelope-o form-icon"></span>
-                                                                    <input class="form-control" type="email"
-                                                                        name="email" placeholder="Email address">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="input-box">
-                                                                <label class="label-text">Message</label>
-                                                                <div class="form-group">
-                                                                    <span class="la la-pencil form-icon"></span>
-                                                                    <textarea class="message-control form-control"
-                                                                        name="message"
-                                                                        placeholder="Write message"></textarea>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <div class="btn-box">
-                                                                <button type="button" class="theme-btn">Leave a
-                                                                    Review</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div><!-- end contact-form-action -->
-                                        </div><!-- end form-content -->
-                                    </div><!-- end form-box -->
-                                </div><!-- end comment-forum -->
-                            </div><!-- end single-content-item -->
-                        </div><!-- end review-box -->
                     </div><!-- end single-content-wrap -->
                 </div><!-- end col-lg-8 -->
                 <div class="col-lg-4">
                     <div class="sidebar single-content-sidebar mb-0">
                         <div class="sidebar-widget single-content-widget">
                             <h3 class="title stroke-shape">Your Reservation</h3>
-                            <form action="/user-dashboard/hotel/create" method="POST">
+                            @auth
+                            <form action="/booking" method="POST">
                                 @csrf
+                                <input type="text" value="{{ auth()->user()->id }}" hidden name="user_id">
+                                <input type="text" value="{{ $room->hotel->id }}" hidden name="hotel_id">
+                                <input type="text" value="{{ $room->id }}" hidden name="room_id">
+                                <input type="text" value="{{ $room->id }}" hidden name="rooms_id">
                                 <div class="sidebar-widget-item">
                                     <div class="contact-form-action">
                                         <div class="input-box">
                                             <label class="label-text">Check-in</label>
                                             <div class="form-group">
                                                 <span class="la la-calendar form-icon"></span>
-                                                <input class="date-range form-control" type="text"
-                                                    name="daterange-single" readonly>
+                                                <input class="date-range form-control" type="date"
+                                                    name="date" readonly>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div><!-- end sidebar-widget-item -->
                                 <div class="sidebar-widget-item">
@@ -787,23 +417,75 @@
                                             <p class="text-black">Your Price</p>
                                             <p class="d-flex align-items-center">
                                                 <span class="font-size-17 text-black">Rp. </span>
-                                                <input type="text" name="total" class="num" value="" id="total"
-                                                    readonly="readonly" />
-                                                <span>/ per room</span>
+                                                <input type="text" readonly name="total" value="" id="total"
+                                                    style="width: 100%"/>
                                             </p>
                                         </div>
                                     </div>
                                 </div><!-- end sidebar-widget-item -->
                                 <div class="btn-box">
-                                    @auth
                                     <button type="submit" name="submit" class="theme-btn text-center w-100 mb-2"
-                                        disabled>Booking Now</button>
-                                    @else
-                                    <button type="submit" class="theme-btn text-center w-100 mb-2" disabled>Please
-                                        Login</button>
-                                    @endauth
+                                        > Booking Now </button>
                                 </div>
                             </form>
+                            @else
+                                <div class="sidebar-widget-item">
+                                    <div class="contact-form-action">
+                                        <div class="input-box">
+                                            <label class="label-text">Check-in</label>
+                                            <div class="form-group">
+                                                <span class="la la-calendar form-icon"></span>
+                                                <input class="date-range form-control" type="date"
+                                                    name="date" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- end sidebar-widget-item -->
+                                <div class="sidebar-widget-item">
+                                    <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
+                                        <label class="font-size-16">Night <span>Stay</span></label>
+                                        <div class="qtyBtn d-flex align-items-center">
+                                            <label for="day" class="qtyDec"><i class="la la-minus"></i></label>
+                                            <input type="text" name="night" id="day" onfocus="sum()" value="0">
+                                            <label for="day" class="qtyInc"><i class="la la-plus"></i></label>
+                                        </div>
+                                    </div><!-- end qty-box -->
+                                    <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
+                                        <label class="font-size-16">Rooms <span>Order</span></label>
+                                        <div class="qtyBtn d-flex align-items-center">
+                                            <label for="room" class="qtyDec"><i class="la la-minus"></i></label>
+                                            <input type="text" name="room" id="room" onfocus="sum()" value="0">
+                                            <label for="room" class="qtyInc"><i class="la la-plus"></i></label>
+                                        </div>
+                                    </div><!-- end qty-box -->
+                                    <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
+                                        <label class="font-size-16">Visitor <span>total</span></label>
+                                        <div class="qtyBtn d-flex align-items-center">
+                                            <label for="adults" class="qtyDec"><i class="la la-minus"></i></label>
+                                            <input type="text" name="visitor" id="adults" onfocus="sum()" value="0">
+                                            <label for="adults" class="qtyInc"><i class="la la-plus"></i></label>
+                                        </div>
+                                    </div><!-- end qty-box -->
+                                </div><!-- end sidebar-widget-item -->
+                                <div class="sidebar-widget-item py-4">
+                                    <div class="extra-service-wrap">
+                                        <div id="checkboxContainPrice">
+                                        </div>
+                                        <div class="total-price pt-3">
+                                            <p class="text-black">Your Price</p>
+                                            <p class="d-flex align-items-center">
+                                                <span class="font-size-17 text-black">Rp. </span>
+                                                <input type="text" readonly name="total" value="" id="total"
+                                                    style="width: 100%"/>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- end sidebar-widget-item -->
+                                <div class="btn-box">
+                                    <button type="submit" class="theme-btn text-center w-100 mb-2" disabled>Please
+                                        Login</button>
+                                </div>
+                            @endauth
                         </div><!-- end sidebar-widget -->
                         <div class="sidebar-widget single-content-widget">
                             <h3 class="title stroke-shape">Why Book With Us?</h3>
@@ -892,12 +574,9 @@
         var adults = document.getElementById('adults').value;
         var room = document.getElementById('room').value;
         var day = document.getElementById('day').value;
-        var price = {
-            {
-                $room - > price
-            }
-        }
+        var price = {{ $room->price }}
         var result = adults * room * day * price;
+
         if (!isNaN(result)) {
             document.getElementById('total').value = result;
         }

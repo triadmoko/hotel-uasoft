@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\StoreBookRequest;
+use App\Models\Book;
 
 class UserController extends Controller
 {
@@ -43,5 +45,21 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');
+    }
+    public function booking(Request $request)
+    {
+        $booking = Book::create([
+            'user_id' => $request->user_id,
+            'hotel_id' => $request->hotel_id,
+            'room_id' => $request->room_id,
+            'rooms_id' => $request->rooms_id,
+            'date' => $request->date,
+            'night' => $request->night,
+            'room' => $request->room,
+            'visitor' => $request->visitor,
+            'total' => $request->total
+        ]);
+
+        return redirect('/user-dashboard/hotel');
     }
 }
