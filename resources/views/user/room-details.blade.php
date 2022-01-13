@@ -738,7 +738,7 @@
                     <div class="sidebar single-content-sidebar mb-0">
                         <div class="sidebar-widget single-content-widget">
                             <h3 class="title stroke-shape">Your Reservation</h3>
-                            <form action="/booking" method="POST">
+                            <form action="/user-dashboard/hotel/create" method="POST">
                                 @csrf
                                 <div class="sidebar-widget-item">
                                     <div class="contact-form-action">

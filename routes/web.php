@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\DashboardHotelController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
@@ -32,4 +33,4 @@ Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
 
-Route::resource('/user-dashboard/hotel', DashboardHotelController::class)->middleware('auth');
+Route::resource('/user-dashboard/hotel', BookController::class)->middleware('auth');

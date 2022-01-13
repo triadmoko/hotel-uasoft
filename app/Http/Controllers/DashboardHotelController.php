@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Hotel;
 use App\Models\Book;
+use App\Models\Hotel;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class DashboardHotelController extends Controller
 {
@@ -15,9 +16,6 @@ class DashboardHotelController extends Controller
      */
     public function index()
     {
-        return view('user/user-dashboard-booking', [
-            'books' => Book::where('user_id', auth()->user()->id)->latest()->get()
-        ]);
     }
 
     /**
@@ -47,11 +45,11 @@ class DashboardHotelController extends Controller
      * @param  \App\Models\book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $hotel)
+    public function show(Hotel $hotel)
     {
-        return view('user/user-dashboard-orders-details', [
-            'book' => $hotel
-        ]);
+        // return view('user/user-dashboard-orders-details', [
+        //     'book' => $hotel
+        // ]);
     }
 
     /**

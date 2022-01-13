@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
+use App\Models\Hotel;
+use Illuminate\Routing\Controller;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
-use App\Models\Book;
 
 class BookController extends Controller
 {
@@ -15,7 +17,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        return view('user/user-dashboard-booking', [
+            'books' => Book::where('user_id', auth()->user()->id)->latest()->get()
+        ]);
     }
 
     /**
@@ -36,7 +40,6 @@ class BookController extends Controller
      */
     public function store(StoreBookRequest $request)
     {
-        //
     }
 
     /**
@@ -45,9 +48,11 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show(Book $hotel)
     {
-        //
+        return view('user/user-dashboard-orders-details', [
+            'book' => $hotel
+        ]);
     }
 
     /**
