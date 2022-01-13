@@ -1,13 +1,9 @@
 <?php
 
-use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\DashboardHotelController;
 use App\Http\Controllers\HotelController;
-use App\Http\Controllers\HotelDetailController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\UserController;
-use App\Models\Hotel;
-use App\Models\Room;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,13 +17,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UserController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/', function () {
+    return view('user.index');
+})->name('login');
 
 Route::get('/hotel-grid', [HotelController::class, 'index']);
 // Route::get('/hotel-detail/{hotel}', [HotelController::class, 'show']);
 Route::get('/hotel-rooms/{hotel}', [RoomController::class, 'viewRoom']);
 Route::get('/room-details/{room}', [RoomController::class, 'show']);
-Route::get('/user-dashboard', [Dashboard::class, 'index'])->middleware('auth');
+Route::get('/user-dashboard', function () {
+    return view('user.user-dashboard');
+})->middleware('auth');
 Route::post('/register', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout']);
+
+Route::resource('/user-dashboard/hotel', DashboardHotelController::class)->middleware('auth');

@@ -738,9 +738,10 @@
                     <div class="sidebar single-content-sidebar mb-0">
                         <div class="sidebar-widget single-content-widget">
                             <h3 class="title stroke-shape">Your Reservation</h3>
-                            <div class="sidebar-widget-item">
-                                <div class="contact-form-action">
-                                    <form action="#">
+                            <form action="/booking" method="POST">
+                                @csrf
+                                <div class="sidebar-widget-item">
+                                    <div class="contact-form-action">
                                         <div class="input-box">
                                             <label class="label-text">Check-in</label>
                                             <div class="form-group">
@@ -749,54 +750,60 @@
                                                     name="daterange-single" readonly>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
-                            </div><!-- end sidebar-widget-item -->
-                            <div class="sidebar-widget-item">
-                                <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
-                                    <label class="font-size-16">Night <span>Stay</span></label>
-                                    <div class="qtyBtn d-flex align-items-center">
-                                        <label for="day" class="qtyDec"><i class="la la-minus"></i></label>
-                                        <input type="text" name="qtyInput" id="day" onfocus="sum()" value="0">
-                                        <label for="day" class="qtyInc"><i class="la la-plus"></i></label>
+
                                     </div>
-                                </div><!-- end qty-box -->
-                                <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
-                                    <label class="font-size-16">Rooms <span>Order</span></label>
-                                    <div class="qtyBtn d-flex align-items-center">
-                                        <label for="room" class="qtyDec"><i class="la la-minus"></i></label>
-                                        <input type="text" name="qtyInput" id="room" onfocus="sum()" value="0">
-                                        <label for="room" class="qtyInc"><i class="la la-plus"></i></label>
-                                    </div>
-                                </div><!-- end qty-box -->
-                                <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
-                                    <label class="font-size-16">Visitor <span>total</span></label>
-                                    <div class="qtyBtn d-flex align-items-center">
-                                        <label for="adults" class="qtyDec"><i class="la la-minus"></i></label>
-                                        <input type="text" name="qtyInput" id="adults" onfocus="sum()" value="0">
-                                        <label for="adults" class="qtyInc"><i class="la la-plus"></i></label>
-                                    </div>
-                                </div><!-- end qty-box -->
-                            </div><!-- end sidebar-widget-item -->
-                            <div class="sidebar-widget-item py-4">
-                                <div class="extra-service-wrap">
-                                    <form action="#" method="post" class="extraServiceForm" id="extraServiceForm">
+                                </div><!-- end sidebar-widget-item -->
+                                <div class="sidebar-widget-item">
+                                    <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
+                                        <label class="font-size-16">Night <span>Stay</span></label>
+                                        <div class="qtyBtn d-flex align-items-center">
+                                            <label for="day" class="qtyDec"><i class="la la-minus"></i></label>
+                                            <input type="text" name="night" id="day" onfocus="sum()" value="0">
+                                            <label for="day" class="qtyInc"><i class="la la-plus"></i></label>
+                                        </div>
+                                    </div><!-- end qty-box -->
+                                    <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
+                                        <label class="font-size-16">Rooms <span>Order</span></label>
+                                        <div class="qtyBtn d-flex align-items-center">
+                                            <label for="room" class="qtyDec"><i class="la la-minus"></i></label>
+                                            <input type="text" name="room" id="room" onfocus="sum()" value="0">
+                                            <label for="room" class="qtyInc"><i class="la la-plus"></i></label>
+                                        </div>
+                                    </div><!-- end qty-box -->
+                                    <div class="qty-box mb-2 d-flex align-items-center justify-content-between">
+                                        <label class="font-size-16">Visitor <span>total</span></label>
+                                        <div class="qtyBtn d-flex align-items-center">
+                                            <label for="adults" class="qtyDec"><i class="la la-minus"></i></label>
+                                            <input type="text" name="visitor" id="adults" onfocus="sum()" value="0">
+                                            <label for="adults" class="qtyInc"><i class="la la-plus"></i></label>
+                                        </div>
+                                    </div><!-- end qty-box -->
+                                </div><!-- end sidebar-widget-item -->
+                                <div class="sidebar-widget-item py-4">
+                                    <div class="extra-service-wrap">
                                         <div id="checkboxContainPrice">
                                         </div>
                                         <div class="total-price pt-3">
                                             <p class="text-black">Your Price</p>
-                                            <p class="d-flex align-items-center"><span
-                                                    class="font-size-17 text-black">Rp. </span> <input type="text"
-                                                    name="total" class="num" value="" id="total"
-                                                    readonly="readonly" /><span>/
-                                                    per room</span></p>
+                                            <p class="d-flex align-items-center">
+                                                <span class="font-size-17 text-black">Rp. </span>
+                                                <input type="text" name="total" class="num" value="" id="total"
+                                                    readonly="readonly" />
+                                                <span>/ per room</span>
+                                            </p>
                                         </div>
-                                    </form>
+                                    </div>
+                                </div><!-- end sidebar-widget-item -->
+                                <div class="btn-box">
+                                    @auth
+                                    <button type="submit" name="submit" class="theme-btn text-center w-100 mb-2"
+                                        disabled>Booking Now</button>
+                                    @else
+                                    <button type="submit" class="theme-btn text-center w-100 mb-2" disabled>Please
+                                        Login</button>
+                                    @endauth
                                 </div>
-                            </div><!-- end sidebar-widget-item -->
-                            <div class="btn-box">
-                                <a href="cart.html" class="theme-btn text-center w-100 mb-2">Book Now</a>
-                            </div>
+                            </form>
                         </div><!-- end sidebar-widget -->
                         <div class="sidebar-widget single-content-widget">
                             <h3 class="title stroke-shape">Why Book With Us?</h3>
@@ -885,7 +892,11 @@
         var adults = document.getElementById('adults').value;
         var room = document.getElementById('room').value;
         var day = document.getElementById('day').value;
-        var price = {{ $room->price }}
+        var price = {
+            {
+                $room - > price
+            }
+        }
         var result = adults * room * day * price;
         if (!isNaN(result)) {
             document.getElementById('total').value = result;

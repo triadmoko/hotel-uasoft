@@ -104,19 +104,19 @@
                                 </div>
                             </div>
                             @auth
-                                <form action="/logout" method="POST">
-                                    @csrf
-                                    <div class="header-right-action">
-                                        <button type="submit" class="theme-btn theme-btn-small"> Log Out</button>
-                                    </div>
-                                </form>
-                            @else
+                            <form action="/logout" method="POST">
+                                @csrf
                                 <div class="header-right-action">
-                                    <a href="#" class="theme-btn theme-btn-small theme-btn-transparent mr-1"
-                                        data-toggle="modal" data-target="#signupPopupForm">Sign Up</a>
-                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
-                                        data-target="#loginPopupForm">Login</a>
+                                    <button type="submit" class="theme-btn theme-btn-small"> Log Out</button>
                                 </div>
+                            </form>
+                            @else
+                            <div class="header-right-action">
+                                <a href="#" class="theme-btn theme-btn-small theme-btn-transparent mr-1"
+                                    data-toggle="modal" data-target="#signupPopupForm">Sign Up</a>
+                                <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
+                                    data-target="#loginPopupForm">Login</a>
+                            </div>
                             @endauth
 
                         </div>
@@ -253,9 +253,11 @@
                                 </ul>
                             </nav>
                         </div><!-- end main-menu-content -->
+                        @auth
                         <div class="nav-btn">
                             <a href="/user-dashboard" class="theme-btn">Dashboard</a>
                         </div><!-- end nav-btn -->
+                        @endauth
                     </div><!-- end menu-wrapper -->
                 </div><!-- end col-lg-12 -->
             </div><!-- end row -->

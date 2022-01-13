@@ -16,6 +16,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Hotel::class);
     }
+    public function book()
+    {
+        return $this->hasMany(Book::class);
+    }
     /**
      * The attributes that are mass assignable.
      *

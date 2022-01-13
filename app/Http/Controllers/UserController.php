@@ -10,7 +10,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('user.index');
     }
     public function register(Request $request)
     {
@@ -30,9 +29,10 @@ class UserController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-
+            $request->get('remember');
             return redirect()->intended('/user-dashboard');
         }
         return back()->with('loginFailed', 'Login Failed!');

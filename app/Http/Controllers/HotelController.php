@@ -17,7 +17,6 @@ class HotelController extends Controller
      */
     public function index()
     {
-        $hotel = Hotel::with(['user', 'rooms'])->latest();
         return view(
             'user/hotel-grid',
             [

@@ -39,11 +39,16 @@
         </div>
     </div>
     <!-- end cssload-loader -->
-    @if (session()->has('sukses'))
-    <script>
-        alert("{{ session('sukses') }}")
-    </script>
-    @endif
+    @auth
+        @else
+        @if (session()->has('sukses'))
+        <script>
+            alert("{{ session('sukses') }}")
+        </script>
+        @endif
+    @endauth
+   
+
     @if (session()->has('loginFailed'))
     <script>
         alert("{{ session('loginFailed') }}")
@@ -179,7 +184,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="custom-checkbox mb-0">
-                                            <input type="checkbox" id="rememberchb">
+                                            <input type="checkbox" name="remember" value="1" id="rememberchb">
                                             <label for="rememberchb">Remember me</label>
                                         </div>
                                         <p class="forgot-password">
