@@ -33,7 +33,7 @@ class RoomController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
@@ -46,7 +46,14 @@ class RoomController extends Controller
      */
     public function store(StoreRoomRequest $request)
     {
-        //
+        Room::create([
+            'hotel_id' => $request->hotel_id,
+            'title' => $request->title,
+            'price' => $request->price,
+            'image' => $request->image
+        ]);
+
+        return redirect('user-dashboard/room/'. $request->hotel_id);
     }
 
     /**

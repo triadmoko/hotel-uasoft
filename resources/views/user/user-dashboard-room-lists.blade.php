@@ -31,7 +31,7 @@
                             </div>
                             <div class="form-content">
                                 <div class="contact-form-action">
-                                    <form action="/room" method="POST" enctype="multipart/form-data">
+                                    <form action="/room" method="POST">
                                         @csrf
                                         <input type="text" name="hotel_id" value="{{ $hotel_id }}" hidden>
                                         <div class="row">
@@ -39,7 +39,7 @@
                                                 <div class="input-box">
                                                     <label for="title" class="label-text">Room Name</label>
                                                     <div class="form-group">
-                                                        <input class="form-control" name="title" type="text">
+                                                        <input class="form-control" name="title" type="text" @old>
                                                     </div>
                                                 </div>
                                             </div><!-- end col-lg-6 -->
@@ -102,7 +102,7 @@
                                                         <h3 class="title">{{ $room->hotel->title }}</h3>
                                                     </div>
                                                 </td>
-                                                <td>Rp. {{ $room->price }}</td>
+                                                <td>Rp. {{ number_format( $room->price) }}</td>
                                                 <td>
                                                     <div class="table-content">
                                                         <a href="/user-dashboard/room/details/{{ $room->id }}"

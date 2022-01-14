@@ -56,7 +56,7 @@ class DashboardHotelController extends Controller
      */
     public function show(Hotel $hotel)
     {
-        return view('user.user-dashboard-hotel-details',[
+        return view('user.user-dashboard-hotel-details', [
             'hotel' => $hotel
         ]);
     }
@@ -90,8 +90,10 @@ class DashboardHotelController extends Controller
      * @param  \App\Models\hotel  $hotel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(hotel $hotel)
+    public function destroy(Hotel $hotel)
     {
-        //
+
+        Hotel::destroy($hotel->id);
+        return redirect('/user-dashboard/hotel');
     }
 }

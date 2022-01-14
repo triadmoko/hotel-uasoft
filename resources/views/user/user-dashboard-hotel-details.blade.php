@@ -37,13 +37,14 @@
                                     <li><span>Hotel Address:</span> {{ $hotel->address }}</li>
                                     <li><span>Total Room:</span> {{ $hotel->total_rooms }}</li>
                                 </ul>
-                                <div class="btn-box mt-4">
-                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
-                                        data-target="#modalPopup">
-                                        Delete</a>
-                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
-                                        data-target="#modalPopup">
-                                        Update</a>
+                                <div class="btn-box mt-4" style="display: flex;">
+                                    <form action="/delete-hotel/{{ $hotel->id }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="theme-btn theme-btn-small" onclick="confirm('Are Your sure')" style="margin-right: 5px">Delete</button>
+                                    </form>
+                                    <form action="" method="post">
+                                        <button type="submit" class="theme-btn theme-btn-small" style="margin-right: 5px">Update</button>
+                                    </form>
                                     <a href="/user-dashboard/room/{{ $hotel->id }}" class="theme-btn theme-btn-small">
                                         Rooms</a>
                                 </div>
