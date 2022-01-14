@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use App\Models\Hotel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\UpdateBookRequest;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 class BookController extends Controller
 {
@@ -30,7 +28,6 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('user.user-dashboard-input-hotel');
     }
 
     /**
@@ -41,14 +38,6 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $validateData = $request->validate([
-            'title' => 'required',
-            'address' => 'required',
-            'total_rooms' => 'required',
-        ]);
-        $validateData['user_id'] = auth()->user()->id;
-        Hotel::create($validateData);
-        return redirect('/user-dashboard/hotel/create')->with('input_hotel', 'Insert Hotel Successfully!!');
     }
 
     /**
@@ -57,10 +46,10 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $hotel)
+    public function show(Book $book)
     {
         return view('user/user-dashboard-orders-details', [
-            'book' => $hotel
+            'book' => $book
         ]);
     }
 

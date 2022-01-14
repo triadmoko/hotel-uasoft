@@ -10,7 +10,7 @@
                 <div class="col-lg-6">
                     <div class="breadcrumb-content">
                         <div class="section-heading">
-                            <h2 class="sec__title font-size-30 text-white">My Booking</h2>
+                            <h2 class="sec__title font-size-30 text-white">My Hotels</h2>
                         </div>
                     </div><!-- end breadcrumb-content -->
                 </div><!-- end col-lg-6 -->
@@ -19,7 +19,7 @@
                         <ul class="list-items">
                             <li><a href="index-2.html" class="text-white">Home</a></li>
                             <li>Dashboard</li>
-                            <li>My Booking</li>
+                            <li>My Hotels</li>
                         </ul>
                     </div><!-- end breadcrumb-list -->
                 </div><!-- end col-lg-6 -->
@@ -34,10 +34,10 @@
                         <div class="form-title-wrap">
                             <div class="d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="title">Booking</h3>
+                                    <h3 class="title">Hotels</h3>
                                     {{-- <p class="font-size-14">Showing 1 to 7 of 17 entries</p> --}}
                                 </div>
-                                <span>Total Bookings <strong class="color-text">({{ $books->count() }})</strong></span>
+                                <span>Total Hotels <strong class="color-text">({{ $hotels->count() }})</strong></span>
                             </div>
                         </div>
                         <div class="form-content">
@@ -45,31 +45,25 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Hotel</th>
-                                            <th scope="col">Room</th>
-                                            <th scope="col">Checkin</th>
-                                            <th scope="col">Night</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Name Hotel</th>
+                                            <th scope="col">Address Hotel</th>
+                                            <th scope="col">Total Rooms</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($books as $book)
+                                        @foreach ($hotels as $hotel)
                                         <tr>
                                             <td>
                                                 <div class="table-content">
-                                                    <h3 class="title">{{ $book->hotel->title }}</h3>
+                                                    <h3 class="title">{{ $hotel->title }}</h3>
                                                 </div>
                                             </td>
-                                            <td>{{ $book->rooms->title }}</td>
-                                            <td>{{ $book->date }}</td>
-                                            <td>{{ $book->night }}</td>
-                                            <td>Rp.{{ number_format($book->total) }}</td>
-                                            <td><span class="badge badge-info py-1 px-2">Pending</span></td>
+                                            <td> {{ $hotel->address }} </td>
+                                            <td> {{ $hotel->total_rooms }} </td>
                                             <td>
                                                 <div class="table-content">
-                                                    <a href="/user-dashboard/book/{{ $book->id }}" class="theme-btn theme-btn-small">Detail</a>
+                                                    <a href="/user-dashboard/hotel/{{ $hotel->id }}" class="theme-btn theme-btn-small">Detail</a>
                                                 </div>
                                             </td>
                                         </tr>

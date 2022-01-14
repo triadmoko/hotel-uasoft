@@ -60,6 +60,6 @@ class UserController extends Controller
             'total' => $request->total
         ]);
 
-        return redirect('/user-dashboard/hotel');
+        return redirect('/user-dashboard/book');
     }
 }

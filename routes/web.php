@@ -35,4 +35,5 @@ Route::post('/logout', [UserController::class, 'logout']);
 
 
 Route::post('/booking', [UserController::class, 'booking'])->middleware('auth');
-Route::resource('/user-dashboard/hotel', BookController::class)->middleware('auth');
+Route::resource('/user-dashboard/book', BookController::class)->middleware('auth');
+Route::resource('/user-dashboard/hotel', DashboardHotelController::class)->middleware('auth');

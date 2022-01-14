@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
 use App\Models\Hotel;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -16,6 +15,9 @@ class DashboardHotelController extends Controller
      */
     public function index()
     {
+        return view('user/user-dashboard-hotel', [
+            'hotels' => Hotel::where('user_id', auth()->user()->id)->get()
+        ]);
     }
 
     /**
@@ -25,7 +27,7 @@ class DashboardHotelController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.user-dashboard-input-hotel');
     }
 
     /**
@@ -36,7 +38,14 @@ class DashboardHotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'title' => 'required',
+            'address' => 'required',
+            'total_rooms' => 'required',
+        ]);
+        $validateData['user_id'] = auth()->user()->id;
+        Hotel::create($validateData);
+        return redirect('/user-dashboard/hotel/create')->with('input_hotel', 'Insert Hotel Successfully!!');
     }
 
     /**
@@ -47,9 +56,7 @@ class DashboardHotelController extends Controller
      */
     public function show(Hotel $hotel)
     {
-        // return view('user/user-dashboard-orders-details', [
-        //     'book' => $hotel
-        // ]);
+        return $hotel;
     }
 
     /**

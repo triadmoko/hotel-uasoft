@@ -18,8 +18,8 @@
             <ul class="sidebar-menu toggle-menu list-items">
                 <li class="{{ Request::is('user-dashboard')? 'page-active' : '' }}"><a href="/user-dashboard"><i
                             class="la la-dashboard mr-2"></i>Dashboard</a></li>
-                <li class="{{ Request::is('user-dashboard/hotel')? 'page-active' : '' }}"><a
-                        href="/user-dashboard/hotel"><i class="la la-shopping-cart mr-2 text-color-4"></i>My Booking</a>
+                <li class="{{ Request::is('user-dashboard/book')? 'page-active' : '' }}"><a
+                        href="/user-dashboard/book"><i class="la la-shopping-cart mr-2 text-color-4"></i>My Booking</a>
                 <li>
                 </li>
                 <li class="{{ Request::is('user-dashboard/hotel/create')? 'page-active' : '' }}">
@@ -29,7 +29,7 @@
                     <a href="#"><i class="la la-list mr-2 text-color-3"></i>Hotel</a>
                     <ul class="toggle-drop-menu active">
                         <li>
-                            <a href="/user-dashboard/hotel/create"><i class="la la-hotel mr-2 text-color-2"></i>
+                            <a href="/user-dashboard/hotel"><i class="la la-hotel mr-2 text-color-2"></i>
                                 List Hotel
                             </a>
                         </li>
