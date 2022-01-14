@@ -62,4 +62,15 @@ class UserController extends Controller
 
         return redirect('/user-dashboard/book');
     }
+    public function room(Request $request)
+    {
+        $booking = Book::create([
+            'hotel_id' => $request->hotel_id,
+            'title' => $request->title,
+            'price' => $request->price,
+            'image' => $request->image,
+        ]);
+
+        return redirect('/user-dashboard/book');
+    }
 }

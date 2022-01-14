@@ -16,7 +16,7 @@ class DashboardHotelController extends Controller
     public function index()
     {
         return view('user/user-dashboard-hotel', [
-            'hotels' => Hotel::where('user_id', auth()->user()->id)->get()
+            'hotels' => Hotel::where('user_id', auth()->user()->id)->latest()->get()
         ]);
     }
 
@@ -56,7 +56,9 @@ class DashboardHotelController extends Controller
      */
     public function show(Hotel $hotel)
     {
-        return $hotel;
+        return view('user.user-dashboard-hotel-details',[
+            'hotel' => $hotel
+        ]);
     }
 
     /**

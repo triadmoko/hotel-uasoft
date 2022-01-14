@@ -6,6 +6,7 @@ use App\Http\Requests\StoreRoomRequest;
 use App\Http\Requests\UpdateRoomRequest;
 use App\Models\Hotel;
 use App\Models\Room;
+use Clockwork\Request\Request;
 
 class RoomController extends Controller
 {
@@ -14,10 +15,19 @@ class RoomController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Hotel $hotel)
     {
+        return view('user.user-dashboard-room-lists', [
+            'rooms' => $hotel->rooms->load('hotel'),
+            'hotel_id' => $hotel->id
+        ]);
     }
-
+    public function dashboardRoomDetails(Room $room)
+    {
+        return view('user.user-dashboard-room-details', [
+            'room' => $room
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *
