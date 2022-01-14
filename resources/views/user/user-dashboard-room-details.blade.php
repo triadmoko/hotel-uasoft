@@ -35,10 +35,12 @@
                                     <li><span>Hotel Name:</span> {{ $room->title }}</li>
                                     <li><span>Price:</span>Rp. {{ number_format($room->price) }}</li>
                                 </ul>
-                                <div class="btn-box mt-4">
-                                    <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
-                                        data-target="#modalPopup">
-                                        Delete</a>
+                                <div class="btn-box mt-4" style="display: flex">
+                                    <form action="/delete-room/{{ $room->id }}" method="post">
+                                        @csrf
+                                        <input type="text" name="hotel_id" value="{{ $room->hotel->id }}" hidden id="">
+                                        <button type="submit" class="theme-btn theme-btn-small" onclick="confirm('Are Your sure')" style="margin-right: 5px">Delete</button>
+                                    </form>
                                     <a href="#" class="theme-btn theme-btn-small" data-toggle="modal"
                                         data-target="#modalPopup">
                                         Update</a>

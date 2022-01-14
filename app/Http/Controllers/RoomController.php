@@ -53,7 +53,7 @@ class RoomController extends Controller
             'image' => $request->image
         ]);
 
-        return redirect('user-dashboard/room/'. $request->hotel_id);
+        return redirect('user-dashboard/room/' . $request->hotel_id);
     }
 
     /**
@@ -111,6 +111,7 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        Room::destroy($room->id);
+        return redirect('/user-dashboard/room/' . $room->hotel_id);
     }
 }

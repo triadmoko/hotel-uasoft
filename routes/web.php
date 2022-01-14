@@ -40,4 +40,5 @@ Route::get('/user-dashboard/room/{hotel}', [RoomController::class, 'index'])->mi
 Route::get('/user-dashboard/room/details/{room}', [RoomController::class, 'dashboardRoomDetails'])->middleware('auth');
 Route::post('/room', [RoomController::class, 'store'])->middleware('auth');
 Route::post('/delete-hotel/{hotel}', [DashboardHotelController::class, 'destroy'])->middleware('auth');
+Route::post('/delete-room/{room}', [RoomController::class, 'destroy'])->middleware('auth');
 Route::resource('/user-dashboard/hotel', DashboardHotelController::class)->middleware('auth');
