@@ -40,19 +40,15 @@
                                 <div class="btn-box mt-4" style="display: flex;">
                                     <form action="/delete-hotel/{{ $hotel->id }}" method="post">
                                         @csrf
-                                        <button type="submit" class="theme-btn theme-btn-small" onclick="confirm('Are Your sure')" style="margin-right: 5px">Delete</button>
+                                        <button type="submit" class="theme-btn theme-btn-small mr-2" onclick="confirm('Are Your sure')">Delete</button>
                                     </form>
-                                    <form action="" method="post">
-                                        <button type="submit" class="theme-btn theme-btn-small" style="margin-right: 5px">Update</button>
-                                    </form>
+                                    <a href="/dashboard-hotel/{{ $hotel->id }}/edit" class="theme-btn theme-btn-small mr-2">Update</a>
                                     <a href="/user-dashboard/room/{{ $hotel->id }}" class="theme-btn theme-btn-small">
                                         Rooms</a>
                                 </div>
                             </div>
                         </div><!-- end form-box -->
-                        
                     </div><!-- end col-lg-12 -->
-                   
                 </div><!-- end row -->
                 <div class="border-top mt-5"></div>
                 <div class="row align-items-center">

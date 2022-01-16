@@ -69,7 +69,9 @@ class DashboardHotelController extends Controller
      */
     public function edit(hotel $hotel)
     {
-        //
+        return view('user.user-dashboard-edit-hotel', [
+            'hotel' => $hotel
+        ]);
     }
 
     /**
@@ -81,7 +83,15 @@ class DashboardHotelController extends Controller
      */
     public function update(Request $request, hotel $hotel)
     {
-        //
+        $rules = $request->validate([
+            'title' => 'required',
+            'address' => 'required',
+            'total_rooms' => 'required',
+        ]);
+        $rules['user_id'] = auth()->user()->id;
+        Hotel::where('id', $hotel->id)
+            ->update($rules);
+        return redirect('user-dashboard/hotel/'. $hotel->id);
     }
 
     /**
